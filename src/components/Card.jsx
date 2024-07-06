@@ -6,7 +6,7 @@ const Card = ({info}) => {
     const {banner,claims,description,plan_name,button_background,cost_per_day,tagged_as} = info;
     console.log(description.data_annual)
   return (
-    <div className='w-3/12 h-[630px] px-3 border-2 border-solid border-black-700 rounded-md'>
+    <div className='w-3/12 h-[640px] px-3 border-2 border-solid border-black-700 rounded-md'>
         <div className='w-full h-2/5 '>
             <img src={banner} alt="" width='100%' height='100%' style={{objectFit:'contain'}} />
         </div>
@@ -17,7 +17,7 @@ const Card = ({info}) => {
                 <p className='text-center text-[10px]'>RS {cost_per_day} per day</p>
             </div>
         </div>
-        <div className='w-full h-[250px] px-3'>
+        <div className='w-full h-[250px] px-3 mt-2'>
             <p className='text-lg font-semibold mb-3'>{claims}</p>
             
             {description.data_annual && description.data_annual.length>0 ? description.data_annual.map((list)=>(
